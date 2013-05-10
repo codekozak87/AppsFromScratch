@@ -1,0 +1,35 @@
+<h1>Plans</h1>
+
+<p><%= link_to 'Add a New Plan', new_plan_url %></p>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Project Name</th>
+      <th>Idea Name</th>
+      <th>Problem</th>
+      <th>Solution</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @plans.each do |plan| %>
+    <tr>
+      <td><%= plan.plan_name %></td>
+      <td><%= plan.idea_name %></td>
+      <td><%= plan.problem %></td>
+      <td><%= plan.solution %></td>
+  
+      <td><%= link_to 'Show', plan_url(plan) %></td>
+      <td><%= link_to 'Edit', edit_plan_url(plan) %></td>
+      <td><%= link_to 'Destroy', plan_url(plan), method: 'delete', data: { confirm: "Do you really want to delete this plan?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

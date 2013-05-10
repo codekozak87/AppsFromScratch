@@ -1,0 +1,26 @@
+<h1>Problems</h1>
+
+<p><%= link_to 'Add a New Problem', new_problem_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @problems.each do |problem| %>
+    <tr>
+  
+      <td><%= link_to 'Show', problem_url(problem) %></td>
+      <td><%= link_to 'Edit', edit_problem_url(problem) %></td>
+      <td><%= link_to 'Destroy', problem_url(problem), method: 'delete', data: { confirm: "Do you really want to delete this problem?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

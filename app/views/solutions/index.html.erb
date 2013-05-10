@@ -1,0 +1,26 @@
+<h1>Solutions</h1>
+
+<p><%= link_to 'Add a New Solution', new_solution_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @solutions.each do |solution| %>
+    <tr>
+  
+      <td><%= link_to 'Show', solution_url(solution) %></td>
+      <td><%= link_to 'Edit', edit_solution_url(solution) %></td>
+      <td><%= link_to 'Destroy', solution_url(solution), method: 'delete', data: { confirm: "Do you really want to delete this solution?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

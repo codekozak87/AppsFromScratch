@@ -1,0 +1,31 @@
+<h1>Editing <%= @plan.plan_name %> Plan</h1>
+
+
+<%= form_tag(plan_url(@plan), method: 'put') do %>
+
+  <div>
+    <%= label_tag :plan_name %><br />
+    <%= text_field_tag :plan_name, @plan.plan_name %>
+  </div> 
+
+  <div>
+    <%= label_tag :idea_name %><br />
+    <%= text_field_tag :idea_name, @plan.idea_name %>
+  </div>
+
+  <div>
+    <%= label_tag :problem %><br />
+    <%= text_field_tag :problem, @plan.problem %>
+  </div>
+
+  <div>
+    <%= label_tag :solution %><br />
+    <%= text_field_tag :solution, @plan.solution %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Plan" %>
+  </div>
+
+<% end %>

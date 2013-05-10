@@ -1,0 +1,11 @@
+<h1>Editing Problem #<%= @problem.id %></h1>
+
+
+<%= form_tag(problem_url(@problem), method: 'put') do %>
+
+  
+  <div>
+    <%= submit_tag "Update Problem" %>
+  </div>
+
+<% end %>

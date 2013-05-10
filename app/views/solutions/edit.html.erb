@@ -1,0 +1,11 @@
+<h1>Editing Solution #<%= @solution.id %></h1>
+
+
+<%= form_tag(solution_url(@solution), method: 'put') do %>
+
+  
+  <div>
+    <%= submit_tag "Update Solution" %>
+  </div>
+
+<% end %>

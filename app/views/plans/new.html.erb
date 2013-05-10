@@ -1,0 +1,32 @@
+<h1>New Plan</h1>
+
+
+<%= form_tag(plans_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :plan_name %><br />
+    <%= text_field_tag :plan_name %>
+  </div>
+
+
+    <div>
+    <%= label_tag :idea_name %><br />
+    <%= text_field_tag :idea_name %>
+  </div>
+
+    <div>
+    <%= label_tag :problem %><br />
+    <%= text_field_tag :problem %>
+  </div>
+
+    <div>
+    <%= label_tag :solution %><br />
+    <%= text_field_tag :solution %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Create Plan" %>
+  </div>
+<% end %>
